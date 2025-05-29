@@ -1,1 +1,6 @@
-# Named-Entity-Recognition-using-Deep-Learning-Models-
+# Named-Entity-Recognition-using-Deep-Learning-Model
+The task is to develop and train a recurrent Neural Network model and a Transformer model to perform Named Entity Recognition which involves identifying and classifying named entities in text into predefined categories. The dataset provided is composed of around 1696 sentences where each word is paired with one of 5 tags/classes: "I-LOC" (location), "I-PER" (person), "I-ORG" (organization), "I-MISC" (miscellaneous), or "O" (outside).
+
+The development process follows a structured ML workflow. The dataset is loaded and analysed to find characteristics like sentence count and tag distributions. This data is then pre-processed to create vocabulary mappings and to create custom data loaders to mount data onto the neural networks.
+Two custom neural networks are implemented: a bidirectional LSTM and a transformer, both configured with similar appropriate hyper-parameters. A training pipeline is used with a 5-fold cross validation approach. Each folds performance is tracked and the best performing model is identified using the F1 score metric.
+Finally, the better model amongst the LSTM and Transformer is identified on the basis of the F1 score and is evaluated on the test data. The metrics for precision, recall, F1 score and a classification report are obtained along with the confusion matrix.
